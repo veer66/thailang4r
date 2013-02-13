@@ -31,3 +31,9 @@ describe "string_chlevel" do
     ThaiLang::string_chlevel("xป").should eq([nil, 1])
   end
 end
+
+describe "exclude_thai_lower_upper" do
+  it "return กปa" do
+    ThaiLang::exclude_thai_lower_upper("กี่ปู่a").should eq("กปa")
+  end
+end

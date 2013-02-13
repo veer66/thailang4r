@@ -29,4 +29,14 @@ module ThaiLang
     end
     level
   end
+  
+  def ThaiLang.exclude_thai_lower_upper(s)
+    included_list = []
+    s.each_char do |ch|
+      if chlevel(ch).nil? or chlevel(ch) == 1
+        included_list << ch
+      end
+    end
+    included_list.join('')
+  end
 end
