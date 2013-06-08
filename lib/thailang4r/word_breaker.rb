@@ -12,7 +12,6 @@ module ThaiLang
     def initialize(path = nil)
       if path.nil?
         path = File.expand_path('../../../data/tdict-std.txt', __FILE__)
-        puts path
       end
       @dict = Dict.new path
   		@dag_builder = WordDagBuilder.new @dict
