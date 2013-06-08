@@ -10,7 +10,7 @@ Gem::Specification.new do |s|
   s.require_paths = ["lib"]
   s.required_ruby_version = Gem::Requirement.new(">= 1.9.3")
   s.summary = "Thai language utility for Ruby"
-  s.files = Dir.glob("lib/**/*") + %w(LICENSE README.md Rakefile)
+  s.files = Dir.glob("lib/**/*") + %w(LICENSE README.md Rakefile) + Dir.glob("data/*")
   s.require_path = 'lib'
   s.add_development_dependency("cucumber", "~> 1.2.1")
 end

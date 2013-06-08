@@ -17,4 +17,9 @@ describe "WordBreaker" do
   it "should break unkown word" do
     @word_breaker.break_into_words("กกตศรรมขจ").should == ["กกต", "ศรรม", "ขจ"]
   end
+  
+  it "should initialize with default dict" do
+    ThaiLang::WordBreaker.new
+  end
+  
 end
