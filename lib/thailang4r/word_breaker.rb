@@ -14,15 +14,15 @@ module ThaiLang
         path = File.expand_path('../../../data/tdict-std.txt', __FILE__)
       end
       @dict = Dict.new path
-  		@dag_builder = WordDagBuilder.new @dict
-  		@ranges_builder = RangesBuilder.new
+      @dag_builder = WordDagBuilder.new @dict
+      @ranges_builder = RangesBuilder.new
     end
 
     def break_into_words(string)
-  		len = string.length
-  		dag = @dag_builder.build(string, len)
-  		ranges = @ranges_builder.build_from_dag(dag, len)
-  		ranges.map{|range| string[range[S], range[E] - range[S]]}
-  	end  	  	
+      len = string.length
+      dag = @dag_builder.build(string, len)
+      ranges = @ranges_builder.build_from_dag(dag, len)
+      ranges.map{|range| string[range[S], range[E] - range[S]]}
+    end       
   end
 end
