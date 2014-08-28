@@ -19,5 +19,7 @@ Word breaker
 # encoding: UTF-8
 require 'thailang4r/word_breaker'
 word_breaker = ThaiLang::WordBreaker.new
-puts word_breaker.break_into_words("ฉันกินข้าว")
+puts word_breaker.break_into_words('กกตศรรมขจ')
+# => ['กกต', 'ศรรม', 'ขจ']
+
 ```
