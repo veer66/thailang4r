@@ -20,4 +20,5 @@ Word breaker
 require 'thailang4r/word_breaker'
 word_breaker = ThaiLang::WordBreaker.new
 puts word_breaker.break_into_words("ฉันกินข้าว")
+# ["ฉัน", "กิน", "ข้าว"]
 ```
