@@ -1,16 +1,14 @@
-$LOAD_PATH << File.expand_path("../lib", __FILE__)
-
 Gem::Specification.new do |s|
   s.name = 'thailang4r'
-  s.version = '0.0.1'
+  s.version = '0.0.2'
   s.authors = ['Vee Satayamas']
-  s.email = ['v.satayamas@gmail.com']
-  s.description = "Thai language utility for Ruby"
+  s.email = ['5ssgdxltv@relay.firefox.com']
+  s.description = "Thai language tools for Ruby, i.e. a word tokenizer, a character level indentifier, and a romanization tool"
   s.homepage = "https://github.com/veer66/thailang4r"
   s.require_paths = ["lib"]
-  s.required_ruby_version = Gem::Requirement.new(">= 1.9.3")
+  s.required_ruby_version = Gem::Requirement.new(">= 3.0.0")
   s.summary = "Thai language utility for Ruby"
   s.files = Dir.glob("lib/**/*") + %w(LICENSE README.md Rakefile) + Dir.glob("data/*")
   s.require_path = 'lib'
-  s.add_development_dependency("cucumber", "~> 1.2.1")
+  s.licenses = ['Apache-2.0']
 end

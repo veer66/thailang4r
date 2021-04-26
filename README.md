@@ -6,19 +6,35 @@ I have built this project in order to collect and share tools for Thai language,
 
 Installation
 ------------
+
 > gem install thailang4r
 
 Character level
 ---------------
+
 * chlevel is similar th_chlevel in [libthai](http://linux.thai.net/projects/libthai).
 * string_chlevel gives array of level back for example string_chlevel("กี") will return [1, 2]
 
 Word breaker
 ------------
+
 ```ruby
 # encoding: UTF-8
 require 'thailang4r/word_breaker'
 word_breaker = ThaiLang::WordBreaker.new
 puts word_breaker.break_into_words("ฉันกินข้าว")
 # ["ฉัน", "กิน", "ข้าว"]
+```
+
+Romanization
+------------
+
+A port of royin.py transliteration from [PyThaiNLP](https://pythainlp.github.io/).
+
+```ruby
+# encoding: UTF-8
+require 'thailang4r/roman'
+royin = ThaiLang::Royin.new
+p .romanize("ฉันกินข้าว", "-")
+# => "chan-kin-khao"
 ```
