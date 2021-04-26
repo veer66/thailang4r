@@ -35,6 +35,6 @@ A port of royin.py transliteration from [PyThaiNLP](https://pythainlp.github.io/
 # encoding: UTF-8
 require 'thailang4r/roman'
 royin = ThaiLang::Royin.new
-p .romanize("ฉันกินข้าว", "-")
+p royin.romanize("ฉันกินข้าว", "-")
 # => "chan-kin-khao"
 ```
