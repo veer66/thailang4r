@@ -38,10 +38,11 @@ module ThaiLang
     end
   end
 
-  DEFAULT_THAI_DICT_PATH = File.expand_path('../../../data/tdict-std.txt', __FILE__)
+
 
   class WordBreaker
-    def initialize(dix_path = DEFAULT_THAI_DICT_PATH)
+    def initialize(dix_path = nil)
+      dix_path = File.expand_path('../../../data/tdict-std.txt', __FILE__) unless dix_path
       @dix = PrefixTree.new(File.open(dix_path).each_line.map { [_1.chomp, 1] })
     end
 
