@@ -1,6 +1,6 @@
 Gem::Specification.new do |s|
   s.name = 'thailang4r'
-  s.version = '0.1.0'
+  s.version = '0.1.1'
   s.authors = ['Vee Satayamas']
   s.email = ['5ssgdxltv@relay.firefox.com']
   s.description = "Thai language tools for Ruby, i.e. a word tokenizer, a character level indentifier, and a romanization tool"
