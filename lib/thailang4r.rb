@@ -29,6 +29,6 @@ module ThaiLang
   end
 
   def self.exclude_thai_lower_upper(string)
-    string.chars.map { |char| char if [nil, 1].include?(chlevel(char)) }.join
+    string.chars.select { |char| [nil, 1].include?(chlevel(char)) }.join
   end
 end
